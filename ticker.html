@@ -433,14 +433,8 @@
   }
 
   function setLogo(elId, team, side){
-    var el = $(elId), src = logoSrc(team), ab = abbr(team.name, team.short_name);
-    if (!src){ el.innerHTML = '<div class="ini '+side+'">'+ab+'</div>'; return; }
-    el.innerHTML = "";
-    var img = new Image();
-    img.alt = ab;
-    img.onerror = function(){ el.innerHTML = '<div class="ini '+side+'">'+ab+'</div>'; };
-    img.src = src;
-    el.appendChild(img);
+    var el = $(elId), ab = abbr(team.name, team.short_name);
+    el.innerHTML = '<div class="ini '+side+'">'+ab+'</div>';
   }
 
   function batRow(p, striker){
