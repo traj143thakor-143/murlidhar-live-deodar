@@ -209,6 +209,67 @@
                      letter-spacing:.5px; text-transform:uppercase; color:#16181d; }
   .sc-worm .lg i{ width:12px; height:12px; border-radius:50%; display:inline-block; }
   .sc-worm svg{ width:100%; height:auto; display:block; }
+
+  /* Murlidhar broadcast strip: integrated red header + white/navy live score */
+  :root{
+    --barH:128px; --nm:25px; --rb:25px; --rbS:15px; --ini:18px;
+    --logoW:118px; --logoImg:82px; --pillName:14px; --pillMax:118px; --score:34px; --ov:18px;
+  }
+  #bar{
+    left:22px; right:22px; bottom:18px; height:var(--barH);
+    align-items:center; overflow:visible; box-sizing:border-box;
+    background:linear-gradient(180deg,#fff 0%,#f2f5fa 100%);
+    border:3px solid #d71920; border-radius:30px;
+    box-shadow:0 9px 26px rgba(8,24,52,.32);
+  }
+  #studio-brand{
+    left:50%; right:auto;
+    bottom:calc(18px + var(--barH) - 16px);
+    transform:translateX(-50%);
+    z-index:8; padding:9px 30px;
+    border:3px solid #fff; border-bottom:0;
+    border-radius:22px 22px 0 0;
+    color:#fff; background:linear-gradient(180deg,#ff2727,#bd0000);
+    box-shadow:0 4px 12px rgba(0,0,0,.28);
+    font-size:21px; font-weight:900; letter-spacing:.8px;
+    text-shadow:0 1px 2px rgba(0,0,0,.25);
+  }
+  .logo{width:var(--logoW);}
+  .logo .ini,.logo img{
+    width:var(--logoImg); height:var(--logoImg);
+    border:4px solid #fff; outline:3px solid #17345f;
+    box-shadow:0 3px 10px rgba(0,0,0,.24);
+  }
+  .players{gap:10px;padding:0 15px;}
+  .prow{gap:8px;}
+  .prow .nm{font-size:var(--nm);font-weight:800;color:#142d50;}
+  .prow .rb{font-size:var(--rb);color:#102b50;}
+  .center{padding:0 5px; z-index:2;}
+  .pill{border-radius:14px;border:2px solid #d9e0ea;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+  .pill .ab{padding:10px 12px;background:#e9eef5;color:#17345f;font-weight:900;}
+  .pill .sc{padding:12px 20px;background:linear-gradient(180deg,#1b477e,#102b50);gap:12px;}
+  .pill .sc .score{font-size:var(--score);font-weight:900;}
+  .ctop{margin-bottom:5px;background:#d71920;color:#fff;}
+  .csub{margin-top:5px;background:#17345f;color:#fff;border:2px solid #fff;
+        border-radius:16px;padding:5px 16px;font-size:14px;box-shadow:0 3px 8px rgba(0,0,0,.2);}
+  .csub.chase{background:#d71920;color:#fff;}
+  body.prov-streamlabs, body.prov-prism{
+    --barH:104px; --nm:17px; --rb:18px; --rbS:12px; --ini:14px;
+    --logoW:72px; --logoImg:52px; --pillName:10px; --pillMax:86px; --score:23px; --ov:13px;
+  }
+  body.prov-streamlabs #studio-brand, body.prov-prism #studio-brand{
+    font-size:14px; padding:6px 14px; bottom:calc(18px + var(--barH) - 12px);
+  }
+  body.prov-streamlabs .players, body.prov-prism .players{padding:0 8px;gap:6px;}
+  @media (max-width:900px){
+    :root{--barH:96px;--nm:17px;--rb:18px;--rbS:11px;--logoW:66px;--logoImg:48px;--score:23px;--ov:13px;}
+    #bar{left:8px;right:8px;bottom:8px;border-radius:20px;}
+    #studio-brand{font-size:14px;padding:6px 14px;bottom:calc(8px + var(--barH) - 12px);}
+    .players{padding:0 7px;gap:5px;}
+    .pill .ab{padding:7px 8px;font-size:10px;}
+    .pill .sc{padding:8px 10px;gap:6px;}
+  }
+
 </style>
 </head>
 <body>
