@@ -28,7 +28,7 @@
     <input id="id" value="25801383" />
     <label>Theme</label>
     <select id="theme" style="width:100%;box-sizing:border-box;padding:10px 12px;border-radius:8px;border:1px solid #2a3645;background:#0d1117;color:#e6edf3;font-size:15px;">
-      <option value="cricheroes" selected>CricHeroes Style (Red / White / Navy Blue)</option>
+      <option value="classic">Classic (white broadcast bar)</option>
       <option value="dark">Dark (translucent, custom colour)</option>
     </select>
     <div id="bgRow" style="display:none;">
@@ -59,7 +59,7 @@
     var pr=document.getElementById('provider').value;
     document.getElementById('bgRow').style.display = th==='dark' ? 'block' : 'none';
     var u='ticker.html?id='+encodeURIComponent(id);
-    if(th) u+='&theme='+th;
+    if(th && th!=='classic') u+='&theme='+th;       // classic is the default
     if(th==='dark' && bg) u+='&bg='+encodeURIComponent(bg);
     if(pr) u+='&provider='+pr;
     var abs=new URL(u, location.href).href;
