@@ -1,1 +1,0 @@
-# sadaram-cricket-ticker
