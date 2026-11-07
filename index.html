@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CricHeroes Live Ticker — setup</title>
+<title>Murlidhar Live Ticker — setup</title>
 <style>
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
        background:#0d1117;color:#e6edf3;line-height:1.6;padding:32px;max-width:760px;margin:0 auto;}
@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-  <h1>CricHeroes Live Ticker</h1>
+  <h1>Murlidhar Live Ticker</h1>
   <p class="sub">Build a browser-source URL for OBS / Streamlabs / PRISM Live Studio.</p>
 
   <div class="box">
@@ -30,12 +30,19 @@
     <select id="theme" style="width:100%;box-sizing:border-box;padding:10px 12px;border-radius:8px;border:1px solid #2a3645;background:#0d1117;color:#e6edf3;font-size:15px;">
       <option value="classic">Classic (white broadcast bar)</option>
       <option value="dark">Dark (translucent, custom colour)</option>
+      <option value="dark">green (translucent, custom colour)</option>
     </select>
     <div id="bgRow" style="display:none;">
       <label>Dark-theme bar colour (translucent)</label>
       <div style="display:flex;gap:10px;align-items:center;">
         <input id="pick" type="color" value="#078BDC" style="width:54px;height:42px;padding:2px;" />
         <input id="bg" value="078BDC" style="flex:1;" />
+        <div id="bgRow" style="display:none;">
+      <label> green-theme bar colour (translucent)</label>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <input id="pick" type="color" value="#078BDC" style="width:54px;height:42px;padding:2px;" />
+        <input id="bg" value="078BDC" style="flex:1;" />
+      </div>
       </div>
     </div>
     <label>Streaming app (compacts text so long names fit)</label>
